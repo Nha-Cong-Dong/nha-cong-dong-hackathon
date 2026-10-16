@@ -41,7 +41,7 @@ Hạn nộp mọi checkpoint là **trước 19:00 Chủ nhật** của tuần đ
 - **Tự viết, không dùng AI** để viết report.
 - Ưu tiên viết dạng **gạch đầu dòng**, ngắn gọn.
 - Viết **Kế hoạch tuần tới** thật cụ thể, vì report tuần sau sẽ đối chiếu lại với phần này.
-- Mục **Nhận xét của Hoàng Đỗ** ở cuối report tuần 1–3 bạn để trống, Hoàng Đỗ sẽ viết vào.
+- Mục **Nhận xét của Hoàng Đỗ** ở cuối mỗi report bạn để trống, Hoàng Đỗ sẽ viết vào.
 
 ## Quy định
 

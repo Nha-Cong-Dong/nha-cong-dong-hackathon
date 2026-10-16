@@ -26,3 +26,9 @@
 ## Cảm nghĩ & lời nhắn gửi Hoàng Đỗ
 
 - 
+
+---
+
+## Nhận xét của Hoàng Đỗ
+
+<!-- Phần này dành cho Hoàng Đỗ -->
