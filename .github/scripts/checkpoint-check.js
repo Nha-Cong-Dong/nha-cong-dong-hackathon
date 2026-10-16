@@ -3,6 +3,7 @@
 
 const TEMPLATE_BRANCH = 'main';
 const BRANCH_PREFIX = 'member/';
+const REVIEW_HEADING = '## Nhận xét của Hoàng Đỗ';
 const CHECKPOINTS = [
   { week: 1, file: 'report/week-1.md', deadline: '2026-10-18T19:00:00+07:00' },
   { week: 2, file: 'report/week-2.md', deadline: '2026-10-25T19:00:00+07:00' },
@@ -30,7 +31,8 @@ function formatVN(date) {
   return `${p.hour}:${p.minute} ${p.day}/${p.month}/${p.year}`;
 }
 
-const normalize = (text) => text.replace(/\r\n/g, '\n').trim();
+// Bỏ mục nhận xét của Hoàng Đỗ, để nhận xét không bị tính là thành viên đã nộp.
+const normalize = (text) => text.replace(/\r\n/g, '\n').split(REVIEW_HEADING)[0].trim();
 
 async function readFile(github, owner, repo, path, ref) {
   try {
@@ -88,7 +90,7 @@ function buildBody(cp, results, serverUrl, owner, repo, now) {
     '',
     `**Đúng hạn:** ${count('Đúng hạn')} · **Nộp trễ:** ${count('Nộp trễ')} · **Chưa nộp:** ${count('Chưa nộp')}`,
     '',
-    'BTC nhận xét cho từng người bằng comment trong issue này.',
+    `Hoàng Đỗ viết nhận xét vào mục "Nhận xét của Hoàng Đỗ" trong file report trên nhánh của từng người.`,
   ].join('\n');
 }
 

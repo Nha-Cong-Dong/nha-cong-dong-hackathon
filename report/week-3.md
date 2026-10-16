@@ -1,11 +1,36 @@
-# Checkpoint 3 — Tuần 3: Build MVP
+# NCĐ Hackathon Report
 
-> **Hạn nộp:** trước 19:00 Chủ nhật 01/11/2026 (giờ VN)
->
-> **Lưu ý:** report phải do bạn tự viết, không dùng AI để viết.
+| Thông tin | Chi tiết |
+| --- | --- |
+| **Tên** |  |
+| **Tuần** | 3 |
+| **Nội dung** | Build MVP |
+| **Hạn nộp** | Trước 19:00 Chủ nhật 01/11/2026 (giờ VN) |
+| **Lưu ý** | Report phải do bạn tự viết, không dùng AI để viết. Ưu tiên viết dạng gạch đầu dòng. |
+| **Link repo sản phẩm** |  |
 
-## MVP đã làm được
+---
 
-## Link chạy thử / ảnh / video
+## Kết quả so với kế hoạch tuần trước
 
-## Khó khăn & kế hoạch tuần tới
+<!-- Đi qua từng đầu việc trong "Kế hoạch tuần tới" của report Checkpoint 2: việc nào xong, việc nào chưa và vì sao, việc nào phát sinh thêm -->
+
+- 
+
+## Tự nhận xét
+
+<!-- Bạn tự đánh giá bản thân trong tuần này -->
+
+- 
+
+## Kế hoạch tuần tới
+
+<!-- Viết cụ thể từng đầu việc: report tuần sau sẽ đối chiếu với phần này -->
+
+- 
+
+---
+
+## Nhận xét của Hoàng Đỗ
+
+<!-- Phần này dành cho Hoàng Đỗ -->
