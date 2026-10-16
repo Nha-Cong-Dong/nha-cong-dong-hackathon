@@ -1,8 +1,20 @@
 // Bot kiểm tra hạn nộp report. Được gọi từ .github/workflows/checkpoint-check.yml.
 // Đổi lịch hackathon: sửa mảng CHECKPOINTS bên dưới (và bảng lịch trong README).
+// Thêm/bớt thành viên: sửa MEMBERS bên dưới (và bảng thành viên trong README).
 
 const TEMPLATE_BRANCH = 'main';
 const BRANCH_PREFIX = 'member/';
+// Tên nhánh (sau member/) → họ tên và username GitHub.
+const MEMBERS = {
+  dungtkm: { name: 'Trần Kiều Minh Dũng', github: 'martlnz' },
+  hoannv: { name: 'Nguyễn Viết Hoàn', github: 'VietHoan225' },
+  bachvt: { name: 'Vương Trí Bách', github: 'definitely-not-BachVT' },
+  khanhnq: { name: 'Nguyễn Quốc Khánh', github: 'NgQKhanh2906' },
+  trieuht: { name: 'Hà Tiến Triệu', github: 'trieuwu' },
+  tungnh: { name: 'Nguyễn Hoàng Tùng', github: 'Luffyreals' },
+  maitn: { name: 'Trần Ngọc Mai', github: 'tngocjm' },
+  anhdtv: { name: 'Đỗ Thị Vân Anh', github: 'vananh-bot' },
+};
 const REVIEW_HEADING = '## Nhận xét của Hoàng Đỗ';
 const CHECKPOINTS = [
   { week: 1, file: 'report/week-1.md', deadline: '2026-10-18T19:00:00+07:00' },
@@ -69,27 +81,31 @@ async function checkMember(github, owner, repo, branch, cp, template) {
     if (fileCommits.length) lastUpdate = fileCommits[0].commit.committer.date;
   }
 
-  return { username: branch.name.slice(BRANCH_PREFIX.length), branch: branch.name, status, lastUpdate };
+  return { status, lastUpdate };
 }
 
-function buildBody(cp, results, serverUrl, owner, repo, now) {
+function buildBody(cp, results, unknownBranches, serverUrl, owner, repo, now) {
   const count = (s) => results.filter((r) => r.status === s).length;
   const rows = results.map((r) => {
     const link = `[xem](${serverUrl}/${owner}/${repo}/blob/${r.branch}/${cp.file})`;
     const updated = r.lastUpdate ? formatVN(r.lastUpdate) : '—';
-    return `| @${r.username} | ${r.status} | ${updated} | ${r.status === 'Chưa nộp' ? '—' : link} |`;
+    const status = r.noBranch ? 'Chưa nộp (chưa tạo nhánh)' : r.status;
+    return `| ${r.name} (@${r.username}) | \`${r.branch}\` | ${status} | ${updated} | ${r.status === 'Chưa nộp' ? '—' : link} |`;
   });
 
   return [
     `**Hạn nộp:** ${formatVN(cp.deadline)} (giờ VN) · **File:** \`${cp.file}\``,
     `**Kiểm tra lúc:** ${formatVN(now)}`,
     '',
-    results.length
-      ? ['| Thành viên | Trạng thái | Cập nhật lần cuối | Report |', '| --- | --- | --- | --- |', ...rows].join('\n')
-      : `Chưa có nhánh \`${BRANCH_PREFIX}*\` nào.`,
+    '| Thành viên | Nhánh | Trạng thái | Cập nhật lần cuối | Report |',
+    '| --- | --- | --- | --- | --- |',
+    ...rows,
     '',
     `**Đúng hạn:** ${count('Đúng hạn')} · **Nộp trễ:** ${count('Nộp trễ')} · **Chưa nộp:** ${count('Chưa nộp')}`,
     '',
+    ...(unknownBranches.length
+      ? [`Nhánh không có trong danh sách thành viên (có thể đặt sai tên): ${unknownBranches.map((b) => `\`${b}\``).join(', ')}`, '']
+      : []),
     `Hoàng Đỗ viết nhận xét vào mục "Nhận xét của Hoàng Đỗ" trong file report trên nhánh của từng người.`,
   ].join('\n');
 }
@@ -105,16 +121,24 @@ module.exports = async ({ github, context, core, weekInput, now = new Date() }) 
   const template = normalize(await readFile(github, owner, repo, cp.file, TEMPLATE_BRANCH));
 
   const branches = (await github.paginate(github.rest.repos.listBranches, { owner, repo, per_page: 100 }))
-    .filter((b) => b.name.startsWith(BRANCH_PREFIX))
-    .sort((a, b) => a.name.localeCompare(b.name));
+    .filter((b) => b.name.startsWith(BRANCH_PREFIX));
+  const byName = new Map(branches.map((b) => [b.name, b]));
 
   const results = [];
-  for (const branch of branches) {
-    results.push(await checkMember(github, owner, repo, branch, cp, template));
+  for (const [id, { name, github: username }] of Object.entries(MEMBERS)) {
+    const branchName = BRANCH_PREFIX + id;
+    const branch = byName.get(branchName);
+    const result = branch
+      ? await checkMember(github, owner, repo, branch, cp, template)
+      : { status: 'Chưa nộp', lastUpdate: null, noBranch: true };
+    results.push({ name, username, branch: branchName, ...result });
   }
+  const unknownBranches = branches
+    .map((b) => b.name)
+    .filter((n) => !Object.hasOwn(MEMBERS, n.slice(BRANCH_PREFIX.length)));
 
   const title = `Checkpoint ${cp.week} — tổng kết nộp report`;
-  const body = buildBody(cp, results, context.serverUrl, owner, repo, now);
+  const body = buildBody(cp, results, unknownBranches, context.serverUrl, owner, repo, now);
 
   const issues = await github.paginate(github.rest.issues.listForRepo, {
     owner, repo, state: 'all', creator: 'github-actions[bot]', per_page: 100,
