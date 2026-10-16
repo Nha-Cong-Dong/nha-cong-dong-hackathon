@@ -30,7 +30,7 @@ Hạn nộp mọi checkpoint là **trước 19:00 Chủ nhật** của tuần đ
 
 ## Viết report
 
-Đầu mỗi report là bảng thông tin. Bạn điền **Tên** và **Link repo sản phẩm** (tuần 1 chưa có repo thì để trống). Sau đó viết các mục bên dưới:
+Đầu mỗi report là bảng thông tin. Bạn điền **Tên**, **Link repo sản phẩm** (tuần 1 chưa có repo thì để trống) và **Ý tưởng** (tóm tắt ngắn ý tưởng sản phẩm của bạn). Sau đó viết các mục bên dưới:
 
 | Tuần | Các mục |
 | --- | --- |

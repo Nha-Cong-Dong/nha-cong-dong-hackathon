@@ -8,6 +8,7 @@
 | **Hạn nộp** | Trước 19:00 Chủ nhật 18/10/2026 (giờ VN) |
 | **Lưu ý** | Report phải do bạn tự viết, không dùng AI để viết. Ưu tiên viết dạng gạch đầu dòng. |
 | **Link repo sản phẩm** |  |
+| **Ý tưởng** |  |
 
 ---
 
