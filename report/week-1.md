@@ -5,8 +5,8 @@
 | **Tên** | Hà TIến Triệu |
 | **Tuần** | 1 |
 | **Nội dung** | Nêu được đã học được gì liên quan tới Claude, Claude Code, Vibe Coding, và nêu ý tưởng cho sản phẩm sẽ build |
-| **Link repo sản phẩm** | https://github.com/Nha-Cong-Dong/ncd-hackathon-by-hatientrieu |
-| **Ý tưởng** |  |
+| **Link repo sản phẩm** | https://github.com/Nha-Cong-Dong/Holocron |
+| **Ý tưởng** | Hệ thống hỗ trợ ôn thi gồm 4 chức năng chính: Quản lý & bóc tách tài liệu: Lưu trữ slide, giáo trình (PDF) theo từng môn học. Tự động bóc tách nội dung theo heading, bảng biểu, công thức và gán tọa độ (trang, vị trí) cho từng đoạn văn bản. Phân loại dữ liệu học tập: Tách tài liệu thành 2 kho độc lập: Kho Lý thuyết (khái niệm, định lý, điểm dễ nhầm lẫn) và Kho Bài tập (công thức, biến số, thuật giải, bài toán mẫu). Phân tích đề cũ & sinh đề tương đương: Quét ảnh chụp đề thi thật để trích xuất cấu trúc (tỷ lệ câu, độ khó, dạng bài tập/lý thuyết, kiểu bẫy). Dùng cấu trúc này để sinh các bộ đề mới có cùng format và độ khó nhưng thay đổi số liệu/ngữ cảnh dựa trên tài liệu đã nạp. Phòng thi thử & đối chiếu nguồn: Giao diện làm bài bấm giờ hoặc luyện tập, tự động chấm điểm, chỉ ra phần kiến thức bị hổng và cho phép bấm 1-click để mở đúng trang PDF/slide chứa lý thuyết liên quan. |
 
 ---
 
