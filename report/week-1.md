@@ -66,3 +66,11 @@
 ## Nhận xét của Hoàng Đỗ
 
 <!-- Phần này dành cho Hoàng Đỗ -->
+
+- Kế hoạch tuần tới chia rất rõ: phần spec (phạm vi, nền tảng, use case và flow, quy tắc nghiệp vụ có số cụ thể, trạng thái kế hoạch, ERD, API, màn hình, yêu cầu phi chức năng) và phần dựng khung, có cả việc chạy thử trước các phần kỹ thuật rủi ro. Đây là cách lên kế hoạch rất tốt.
+- Ý tưởng có vấn đề thật và đi theo trọn vòng một buổi chạy (Lên kế hoạch → Chuẩn bị → Thực hiện → Theo dõi → Đánh giá), giai đoạn nào cũng có tính năng cụ thể.
+- Nên chốt nền tảng sớm nhất: ghi GPS khi tắt màn hình gần như không làm được trên web, trình duyệt sẽ dừng ghi; thường cần app di động (Flutter, React Native…). Nếu chọn web thì nên bỏ yêu cầu này khỏi MVP. Bạn đã đưa đúng phần này vào danh sách chạy thử, làm việc đó ngay đầu tuần.
+- Câu hỏi "có cần đăng nhập hay chỉ lưu trên máy" đáng chốt sớm: nếu mỗi người chỉ dùng trên một máy, lưu cục bộ giúp bớt hẳn phần tài khoản và backend.
+- 5 giai đoạn đều làm đủ thì nhiều cho 3 tuần. Gợi ý MVP: lên kế hoạch kèm đánh giá thời tiết, ghi một buổi chạy (GPS, quãng đường), lưu lịch sử; thống kê và so sánh kế hoạch với thực tế để sau.
+- Phần học mới là các tiêu đề (khác biệt với lập trình truyền thống, lợi ích và rủi ro, 4 kỹ năng cốt lõi, quy trình) mà chưa có nội dung. Tuần sau ghi 1–2 ý cho mỗi mục, ví dụ 4 kỹ năng đó là gì và bạn đã thử kỹ năng nào.
+- Chưa có repo, tuần 1 chưa bắt buộc; tuần 2 bạn tạo repo và điền link vào report.
