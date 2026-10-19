@@ -66,3 +66,12 @@
 ## Nhận xét của Hoàng Đỗ
 
 <!-- Phần này dành cho Hoàng Đỗ -->
+
+- Phần học về Claude viết kỹ và có ví dụ tự nghĩ: ví dụ email xin lỗi để minh hoạ "đưa ngữ cảnh thay vì liệt kê từng yêu cầu" cho thấy bạn hiểu chứ không chép định nghĩa. Mẹo "cho phép Claude nhận là không biết" để giảm ảo giác cũng rất đáng dùng.
+- Bộ nguyên tắc vibe code bạn gom lại rõ ràng (PRD.md, CLAUDE.md, PROGRESS.md, lên plan trước khi sửa lỗi, không cho Claude tự đẩy lên main). Repo Essity đang làm đúng tinh thần đó: chia task T0.x/T1.x, mỗi task một nhánh và một PR.
+- Phần Claude Code mới dừng ở liệt kê các mode. Tuần sau kể một tình huống thật trong Essity: bạn chọn plan mode hay auto mode, vì sao, và kết quả ra sao.
+- `docs/` và `PROGRESS.md` đang nằm trong `.gitignore`, nên spec/PRD không có trên repo. Checkpoint 2 cần spec nằm trong repo hoặc có link mở được, bạn đưa phần spec lên nhé.
+- Essity sau một tuần đã là monorepo nhiều service (web, core-api, ai-service, infra) với OpenTelemetry, rate limit bằng Redis, gửi email, job nền Procrastinate, khoảng 8.000 dòng. Các task gần đây chủ yếu là hạ tầng và tài khoản. Phần demo được lại là vòng lõi: nạp tài liệu → sinh câu hỏi → AI chấm → xếp lịch FSRS. Gợi ý ưu tiên cho vòng lõi này chạy end-to-end trước khi thêm hạ tầng.
+- Mục Kế hoạch tuần tới đang để trống, đây là thiếu sót lớn nhất của report vì tuần sau sẽ đối chiếu với nó. Bạn bổ sung các đầu việc tuần 2 vào mục này.
+- Report được commit lúc 19:03 18/10, sau hạn 3 phút nên tính là nộp trễ.
+- Tự nhận xét mới nêu phần làm tốt. Mình đồng ý phần học rất kỹ, nhưng tự nhận xét sẽ có ích hơn nếu nêu cả điểm chưa được, ví dụ thiếu kế hoạch và nộp trễ ở tuần này.
