@@ -33,3 +33,11 @@
 ## Nhận xét của Hoàng Đỗ
 
 <!-- Phần này dành cho Hoàng Đỗ -->
+
+- Phần đã làm có trải nghiệm thật: dùng Claude Code để rà soát và sửa code trong một project khác, đặt Persona & Rules trong instructions, tải tài liệu nguồn để Claude trả lời theo. Đây đúng là kiểu "tự tay thử" mà checkpoint 1 cần.
+- Report còn thiếu phần Vibe Coding. Checkpoint 1 hỏi cả Claude, Claude Code và Vibe Coding; tuần sau thêm vài ý về quy trình bạn đang theo, ví dụ viết spec trước, dùng CLAUDE.md, kiểm tra sau mỗi bước.
+- Ý tưởng web Pokémon có phạm vi rõ (tra cứu, chuỗi tiến hoá, so sánh 2 Pokémon, gợi ý đội hình) và vừa sức 3 tuần.
+- Về dữ liệu: cân nhắc dùng PokéAPI (pokeapi.co, miễn phí) thay vì tự thu thập; API này có sẵn tên, hình, hệ, chỉ số và chuỗi tiến hoá.
+- "Đề xuất Pokémon cho đội hình" là phần khó nhất vì cần quy tắc rõ ràng. Định nghĩa trước tiêu chí (ví dụ phủ được nhiều hệ, bù điểm yếu của đội) rồi mới để Claude code theo.
+- Kế hoạch tuần tới chỉ có một dòng chung chung nên tuần sau khó đối chiếu. Checkpoint 2 cần: tạo repo và điền link vào report, viết spec (các trang, tính năng làm/không làm, stack, nguồn dữ liệu), dựng khung chạy được, có CLAUDE.md. Bạn ghi các đầu việc này vào mục kế hoạch.
+- Tự nhận xét thẳng thắn (chưa chú tâm, mới hiểu bề nổi). Tuần 2 nhiều việc cụ thể hơn, thử đặt mốc giữa tuần là có repo và spec nháp.
