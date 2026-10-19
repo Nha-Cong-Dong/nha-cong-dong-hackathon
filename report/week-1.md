@@ -32,3 +32,11 @@
 ## Nhận xét của Hoàng Đỗ
 
 <!-- Phần này dành cho Hoàng Đỗ -->
+
+- Ý tưởng rõ người dùng và giá trị: sắp xếp sản phẩm, lịch chăm sóc da sáng/tối, theo dõi tần suất, cảnh báo hoạt chất trùng hoặc cần thận trọng khi kết hợp, có giải thích và nguồn.
+- Phần cảnh báo hoạt chất là lõi của sản phẩm và cũng rủi ro nhất: để AI tự sinh cảnh báo thì dễ sai. Gợi ý tự soạn một bảng quy tắc nhỏ (cặp hoạt chất, mức cảnh báo, nguồn), app tra theo bảng đó; AI chỉ dùng để diễn giải cho dễ hiểu.
+- Với dữ liệu sản phẩm, MVP có thể cho người dùng tự nhập hoặc chọn hoạt chất chính từ danh sách, thay vì tự động tra thành phần theo tên sản phẩm.
+- Phần học mới liệt kê đầu mục (Claude là gì, các mô hình, Claude Projects) và chưa có Claude Code, Vibe Coding, hai mảng checkpoint 1 yêu cầu. Tuần 2 bạn sẽ dùng Claude Code để dựng khung, nhớ ghi lại trải nghiệm đó.
+- Mục Kế hoạch tuần tới đang để trống nên tuần sau không có gì để đối chiếu. Bạn bổ sung các đầu việc tuần 2: tạo repo, chốt spec (tính năng làm/không làm, dữ liệu sản phẩm và hoạt chất, các màn hình chính), dựng khung chạy được, viết CLAUDE.md.
+- Report được commit lúc 00:00 19/10, sau hạn 5 tiếng nên tính là nộp trễ.
+- Tuần 2 khối lượng nhiều hơn tuần 1; thử chọn trước 2–3 buổi cố định trong tuần, buổi đầu tạo repo và viết spec nháp.
