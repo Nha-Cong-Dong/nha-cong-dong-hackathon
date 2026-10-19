@@ -38,3 +38,10 @@
 ## Nhận xét của Hoàng Đỗ
 
 <!-- Phần này dành cho Hoàng Đỗ -->
+
+- Tại hạn 19:00 18/10, mục Ý tưởng và Kế hoạch tuần tới còn trống; hai mục này được thêm lúc 03:20–04:24 ngày 19/10, link repo cũng đổi sang Holocron lúc đó. Report vẫn được tính đúng hạn, nhưng lần sau bạn hoàn thiện trước 19:00. Bảng thông tin cũng đang thiếu dòng Hạn nộp, Lưu ý và tiêu đề đã đổi thành "Báo cáo tuần 1"; bạn giữ nguyên template nhé.
+- Kế hoạch tuần tới bám sát mục tiêu checkpoint 2: spec chi tiết tới từng schema và endpoint, user flow, database schema, API contracts, chọn 2–3 tính năng lõi, CLAUDE.md kỹ. Tuần sau mình sẽ đối chiếu từng việc.
+- Ý tưởng trong report gồm 4 khối lớn (bóc tách PDF có toạ độ, tách kho lý thuyết/bài tập, phân tích đề cũ từ ảnh để sinh đề tương đương, phòng thi thử), quá lớn cho 3 tuần. `SPECIFICATION.md` đã thu hẹp MVP về một golden path (Hệ điều hành — CPU Scheduling) cộng Ingestion Gate, đây là hướng đúng. Bạn ghi rõ phạm vi MVP này trong report để ý tưởng và kế hoạch khớp nhau.
+- Thiết kế "mọi con số do code chạy trong sandbox tính, LLM chỉ viết template" là quyết định hay để tránh AI tính sai. Phần chạy code bằng `exec` cần soi kỹ về bảo mật, mình sẽ xem trong code review tuần 2.
+- Phần học mới ở mức cài đặt và làm quen (Node.js, Claude Code, auto mode, phân biệt Desktop và Code); Vibe Coding mới ghi "đại khái là về quy trình". Repo đã có nhánh develop/feature, ruff, mypy strict; tuần sau bạn kể cụ thể quy trình mình đang theo.
+- Tự nhận xét "debug kém do phụ thuộc AI" rất thẳng thắn. Gợi ý một thói quen: khi gặp lỗi, tự đọc traceback và ghi ra phỏng đoán nguyên nhân trước, rồi mới hỏi Claude và so với câu trả lời.
