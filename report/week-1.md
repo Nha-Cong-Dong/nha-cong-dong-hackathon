@@ -48,3 +48,11 @@
 ## Nhận xét của Hoàng Đỗ
 
 <!-- Phần này dành cho Hoàng Đỗ -->
+
+- Kế hoạch tuần tới viết cụ thể: 4 đầu việc (pose push-up bằng MediaPipe, đếm rep bằng Python có test, trang quay trên điện thoại, quay và gán nhãn dataset) đều kiểm chứng được. Tuần sau mình sẽ đối chiếu từng việc. Repo đã có commit MediaPipe estimator và bộ đếm rep sáng 19/10, đang bám đúng kế hoạch.
+- Ý tưởng FormCoach có vấn đề rõ (người tự tập bài compound khó giữ đúng form, dễ chấn thương) và người dùng cụ thể.
+- Repo khá chỉn chu cho tuần 1: có CLAUDE.md, `docs/ARCHITECTURE.md`, tiêu chí gán nhãn, và `docs/journal.md` ghi lại từng lần thử. Viết journal là thói quen rất tốt khi vibe code, bạn giữ nhé.
+- Lộ trình trong README đang dồn coach AI, mục tiêu, streak, đồ thị, deploy và demo vào tuần 4, trong khi tuần 4 của hackathon dành cho hoàn thiện, deploy và demo. Gợi ý chốt MVP chỉ có push-up: đếm rep và phát hiện 1–2 lỗi phổ biến; coach, mục tiêu, streak để sau.
+- Gán nhãn dataset bằng tay để train ML tốn khá nhiều thời gian. README đã có ý so với baseline luật; cân nhắc làm luật theo góc khớp trước, chỉ thêm ML khi luật không đủ.
+- Phần học về Claude mới liệt kê (lệnh hay dùng, chọn model/effort, plan mode, viết skill) và chưa có mục Vibe Coding riêng. Tuần sau nêu ví dụ cụ thể, ví dụ skill bạn viết dùng để làm gì, hoặc một lần plan mode giúp bạn tránh làm sai.
+- Tự nhận xét "chưa biết đánh giá scope" là chính xác. Khi chốt spec tuần 2, thêm một mục "không làm" để giữ scope.
