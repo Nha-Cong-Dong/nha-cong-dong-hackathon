@@ -2,7 +2,7 @@
 
 | Thông tin | Chi tiết |
 | --- | --- |
-| **Tên** |  |
+| **Tên** | Nguyễn Hoàng Tùng |
 | **Tuần** | 1 |
 | **Nội dung** | Nêu được đã học được gì liên quan tới Claude, Claude Code, Vibe Coding, và nêu ý tưởng cho sản phẩm sẽ build |
 | **Hạn nộp** | Trước 19:00 Chủ nhật 18/10/2026 (giờ VN) |
