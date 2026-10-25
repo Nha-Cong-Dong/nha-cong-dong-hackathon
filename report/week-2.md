@@ -16,7 +16,7 @@
 
 <!-- Đi qua từng đầu việc trong "Kế hoạch tuần tới" của report Checkpoint 1: việc nào xong, việc nào chưa và vì sao, việc nào phát sinh thêm -->
 
-- - Chốt specification cho sản phẩm:
+- Chốt specification cho sản phẩm: (Đã xong trong SPEC.md)
     - Chốt phạm vi + nền tảng
         - Nền tảng
         - MVP cần có của sản phẩm
@@ -28,7 +28,7 @@
     - Xác định API, công nghệ sẽ dùng
     - Có các giao diện nào
     - Các yêu cầu phi chức năng (Ghi GPS khi tắt màn hình, bảo mật API key,...)
-- Dựng khung dự án: 
+- Dựng khung dự án: (Đã xong)
     - Chốt công nghệ (Front, Back)
     - Khởi tạo repo cho sản phẩm
     - Khung code
@@ -41,8 +41,8 @@
 <!-- Bạn tự đánh giá bản thân trong tuần này -->
 
 - Đã hiểu cách làm việc của Claude
-- Nhưng có nhiều công nghệ mà Claude gợi ý chưa hiểu hết được 
-- Chưa đi vào code nên cũng chưa gặp vấn đề gì
+- Nhưng có nhiều công nghệ mà Claude gợi ý chưa hiểu hết được
+- Chưa đi vào code sâu nên cũng chưa gặp vấn đề gì, có vẻ là các phần code sẽ cần nhiều thời gian để hiểu claude viết, mới thêm thử skill explain để claude giải thích code
 
 ## Kế hoạch tuần tới
 
