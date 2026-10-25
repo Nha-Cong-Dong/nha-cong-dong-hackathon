@@ -7,7 +7,7 @@
 | **Nội dung** | Nêu được đã học được gì liên quan tới Claude, Claude Code, Vibe Coding, và nêu ý tưởng cho sản phẩm sẽ build |
 | **Hạn nộp** | Trước 19:00 Chủ nhật 18/10/2026 (giờ VN) |
 | **Lưu ý** | Report phải do bạn tự viết, không dùng AI để viết. Ưu tiên viết dạng gạch đầu dòng. |
-| **Link repo sản phẩm** |  |
+| **Link repo sản phẩm** | https://github.com/Nha-Cong-Dong/RunMate |
 | **Ý tưởng** | Chạy bộ ngoài trời phụ thuộc rất nhiều vào thời tiết, người chạy phải lựa chọn địa điểm, thời gian đồng thời cần biết trước tình trạng thời tiết để chuẩn bị để tránh gặp mưa, nắng nóng, gió mạnh giữa buổi chạy. Hơn nữa, nhiều người chạy thường có xu hướng có lập kế hoạch nhưng lại quên lịch, bỏ lịch, không ghi lại kết quả. Vì vậy, họ khó thấy được sự tiến bộ để duy trì lâu dài. App sẽ đi theo 1 hệ thống duy nhất, đi theo đủ vòng của 1 buổi chạy: Lên kế hoạch -> Chuẩn bị -> Thực hiện -> Theo dõi -> Đánh giá|
 
 ---
@@ -16,9 +16,29 @@
 
 - Về Vibe Coding:
     - Sự khác biệt giữa lập trình truyền thống với Vibe Coding
+        - Lập trình truyền thống: Công việc trọng tâm ghi nhớ các cú pháp của thuật toán, logic chi tiết của từng ngôn ngữ, tưởng tượng lập trình truyền thống giống như 1 người thợ xây phải tự tay trộn vữa, tỉa tót, đặt từng viên gạch xây ngôi nhà
+        - Vibe Coding: Công việc trọng tâm là tư duy sản phẩm, hệ thống, phân rã bài toán, vibe coding giống như đang trở thành 1 đội thi công thần tốc, biến những ý tưởng, mô tả của hệ thống thành các bản vẽ, ngôi nhà trong vòng tích tắc 
     - Lợi ích và những rủi ro của Vibe Coding
+        - Lợi ích:
+            - Dù bạn chỉ là non-tech nhưng vẫn có thể xây lên app trong tuần đầu tiên
+            - Không cần phải gõ tay từng dòng code, từng dấu ;
+        - Rủi ro:
+            - Technical Debt: Nợ kĩ thuật, tức là nếu bạn yêu cầu sửa tính năng này tính năng kia mà không có kiến trúc từ đầu thì chỉ sau vài lần dự án sẽ phình to, cả bạn và AI không thể hiểu được
+            - Ảo giác logic: Ứng dụng trông bề ngoài có vẻ mượt mà, nhưng bên trong tính toán sai số liệu tài chính hoặc bỏ qua các trường hợp kiểm tra biên 
+            - Lỗ hổng bảo mật: AI có thể vô tình hardcode API Keys, Token mật vào mã nguồn công khai hoặc thiếu cơ chế phân quyền 
+            - Bị phụ thuộc: Nếu người mới bắt đầu chỉ "copy-paste vibe" mà không học tư duy nền tảng, khi xảy ra sự cố lớn trên môi trường Production sẽ hoàn toàn bất lực.
     - 4 kỹ năng cốt lõi của 1 Vibe Coder
+        - Kỹ năng phân rã bài toán
+        - Kỹ năng chuẩn bị ngữ cảnh
+        - Kỹ năng đọc hiểu lỗi và log
+        - Kỹ năng sử dụng git
     - Quy trình thực chiến Vibe Coding
+        - Chuẩn Bị & Khởi Tạo Môi Trường (Git)
+        - Thiết Lập Hệ Thống Luật (CLAUDE.md)
+        - Dựng Khung Cơ Sở (SPEC + khung code)
+        - Lặp Phát Triển Từng Lát Cắt Dọc (Phân rã bài toán + đi từng các module)
+        - Gỡ Lỗi, Tái Cấu Trúc & Đóng Gói
+        - Phát hiện lỗi logic / crash
 
 - Về Claude/ Clause Code:
     - Tìm hiểu được những điểm khác biệt, tính năng vượt trội của Claude khi code với các AI khác
