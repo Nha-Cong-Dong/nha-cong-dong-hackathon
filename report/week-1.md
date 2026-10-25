@@ -37,3 +37,10 @@
 ## Nhận xét của Hoàng Đỗ
 
 <!-- Phần này dành cho Hoàng Đỗ -->
+
+- Ý tưởng DailyDiary rõ và có điểm nhấn riêng (Year in Pixels, dòng thời gian, ảnh kỷ niệm).
+- Phần học đang nằm hết trong 2 Google Docs. Report là bản ghi để đối chiếu qua từng tuần, nên bạn tóm 3–5 ý chính ngay trong report: học được gì về Claude Chat, Claude Code, Claude Design, đã thử gì.
+- Repo đã có `docs/Project_Specs.md` và `docs/MVP_Plan.md` rất chi tiết: chia lát cắt dọc, dừng duyệt sau mỗi bước, gắn rate limit ngay khi viết endpoint. Phần này nhiều hơn hẳn những gì report kể, nên nhắc tới trong report.
+- `MVP_Plan.md` có 16 bước (0–15), gồm đăng nhập Google, ảnh qua presigned URL, tự động lưu bằng IndexedDB có xử lý xung đột, tìm kiếm, xuất dữ liệu, xoá tài khoản, Sentry, sao lưu. Như vậy là quá nhiều cho 3 tuần. Gợi ý giữ lõi: viết nhật ký kèm ảnh, dòng thời gian, Year in Pixels; phần còn lại để sau.
+- Kế hoạch tuần tới (Design System → UI → đưa lên web cho mọi người dùng thử) đang đi thẳng vào giao diện. Checkpoint 2 là chốt spec và dựng khung chạy được: spec hiện vẫn ghi "Bản nháp… chờ duyệt phần còn lại", còn `main` mới có commit setup (khung đang ở nhánh `chore/project-foundation`). Nên chốt spec và đưa khung lên `main` trước, rồi mới làm UI.
+- Tách kế hoạch thành đầu việc đo được, ví dụ "chốt Project_Specs bản 1.0", "web + API chạy local, README có cách chạy", "design system: màu, chữ và 5 component cơ bản".
