@@ -27,17 +27,43 @@
     - 18% context luôn thường trực (always-on) trên 40k tokens do file CLAUDE.md. Cái này chưa có định hướng fix
   - **Đây coi như là nhật ký cho đến 23h ngày 19/10/2026**
 
+
+- Sau 3 ngày không động vào project nhưng không ngừng nghĩ về project thì đã có rất nhiều plan, định hướng và thay đổi cho project so với bản trước đây. Cụ thể
+  - Đổi phạm vi từ một môn sang đa môn. Tức là giờ đây MVP sẽ cố gắng chạy ổn định với bất cứ loại input nào dạng pdf, tách nội dung rồi phân thành các phần để truy suất, đồng thời tạo câu hỏi tự luận cho người dùng. Định hướng tương lai sẽ phát triển tracking hình ảnh rồi thì chữ viết tay để chuyển hóa lại (khê)
+  - Thêm nhập tài liệu môn học (PDF slide, giáo trình, đề cương) mọi khẳng định gắn trích dẫn nguyên văn đã kiểm chứng (so khớp sau chuẩn hoá NFC).
+  - Nhập PDF theo tầng như: lớp chữ, rồi OCR Tesseract (tiếng Việt), rồi đối chiếu RapidOCR và nhận bảng (riêng vụ nhận bảng này chưa test xem); có xem lại từng trang. Chọn Tesseract vì đo trên scan giả lập thấy RapidOCR không đọc được dấu thanh :v.
+  - Thêm câu hỏi lý thuyết sinh tất định từ cặp khái niệm–định nghĩa (LLM không soạn thân câu hay phương án). Thực ra đã định add API key thủ công để tạo câu hỏi dạng trắc nghiệm (khê).
+  - Thêm hai loại câu hỏi tự luận đó là MCQ và ESSAY; mỗi môn có exam_format (môn năm 1-2 chủ yếu trắc nghiệm, năm 3-4 chủ yếu tự luận). Tự luận thì hiện tại MVP chỉ làm "trình bày khái niệm", chấm offline bằng độ phủ n-gram, report lại là "khớp x/y ý".
+  - Không có API key cho LLM vẫn chạy phần offline, app báo khả năng nào đang có. Đang test các khả năng như tạo câu hỏi trắc nghiệm (khê) với API Key của LLM.
+  - Chốt hướng làm từ website sang desktop app (Tauri), lưu dữ liệu bằng SQLite local, nhập tài liệu bất đồng bộ.
+  - Câu tính toán làm ở luồng song song, không chặn luồng chính ( đang tính lùi sau MVP)
+  - Đổi cách làm từ việc người dùng tự làm (lúc rảnh) sau đó kiểm tra, trả lời và check liên tục thành việc cho nhiều sub-agent, khi làm việc xong thì tạo thành nhánh, mỗi nhánh có review độc lập, có cả kiểm tra bằng github bot (cái này thấy là khuyên dùng). Tuy thế đang giới hạn 1 session sub-agent khoảng 2 tiếng, sau 2 tiếng t sẽ tự vào, đọc report, xem qua toàn bộ thay đổi, định hướng làm tiếp và duyệt. VỤ này chưa nghĩ ra phương án nào ngon hơn nen chưa thể treo xuyên đêm được. SUbagent cũng khá ngu khi dừng ngay lập tức nếu có hết token pool (tại t, đã fix ở claude.md).
+
+- Tuần này dù làm thực chất không nhiều do phải cân đối thi giữa kỳ nhiều môn + di làm liên tục mấy hôm để bù cho tgian nghỉ (dù chưa xong). Nhưng cũng có định hướng cụ thể hơn, suy nghĩ sâu xa hơn vào đề bài + prj mà mình chọn. Đồng thời cũng rèn luyện được cách xài claude khá hay ho và mới lạ. Nói chung đối với t là tuần này hiệu quả, tự chấm 7.5/10, tuần sau cố lên 8/10.
+
+- Đối chiếu với kế hoạch tuần 1:
+  - Chốt specification cục bộ (bài toán, giải pháp, tệp người dùng, tech stack, phạm vi MVP): hoàn thành, vượt mức đề ra kha khá.
+  - Bộ đặc tả chi tiết đến schema và endpoint: hoàn thành.
+  - User flow, database schema, API contracts: phần lớn tạm ổn - có thể tính là đã xong. Contract và schema SQLite đã viết và đã có PR; user flow mới ở mức luồng trong spec, chưa kiểm bằng giao diện thật vì frontend mới làm một phần, tuần sau sẽ định hướng tìm hiểu và sử dụng Claude Design.
+  - Lấy 2-3 tính năng cốt lõi cho MVP: hoàn thành (các tính năng đó bao gồm: nhập tài liệu vào Vault; sinh câu hỏi có kiểm chứng; nhập đề qua Gate).
+  - Hoàn thiện repo với CLAUDE.md thật kỹ: hoàn thành.
+  - Vừa học vừa thử nghiệm Claude và Claude Code: hoàn thành, thêm subagent, chạy không người, theo dõi token, dùng model hợp lí để tiết kiệm token tối đa, reset context window, rồi thì đổi và đóng các session từ claude code đến claude desktop. 
+
+
 ## Tự nhận xét
 
-<!-- Bạn tự đánh giá bản thân trong tuần này -->
-
-- 
+- DDieuf đang làm tốt:
+  - Khá nghiêm túc làm, cũng như khá tập trung. Tuần vừa rồi tuy làm không nhiều lắm nhưng khá hiệu quả.
+  - Spec đi nhanh hơn dự kiến. Hướng sản phẩm cũng rõ ràng hơn chứ không còn là ý tưởng vẽ vời khủng khiếp nữa.
+- Chưa tốt:
+  - Thời gian làm thực tế khá ít. Thực tế dành 16-18 tiếng làm tuần này, coi như là gần 3 tiếng 1 ngày. Vậy là ít hơn so với thực tế, đồng thời thực tế cách làm việc cũ khá chậm. Đã đổi cách làm việc và đang test xem có hiệu quả không. Tuần này kẹt 3 ngày do kiểm tra giữa kỳ căng và đi làm bù.
+  - Tài liệu thật để tets chưa đủ rộng...
 
 ## Kế hoạch tuần tới
 
-<!-- Viết cụ thể từng đầu việc: report tuần sau sẽ đối chiếu với phần này -->
-
-- 
+- Nửa đầu tuần: hoàn thành MVP cơ bản. Luồng đơn giản sẽ là: nhập tài liệu, nhận câu trắc nghiệm lý thuyết có trích dẫn nguyên văn, làm bài và xem đáp án, tất cả trong app offline, sau đó có thể đổi qua chọn phương án trắc nghiệm 4 đáp án, có thể dùng API có sẵn hoặc thêm API vào để LLM tạo câu trả lời cho chính xác nhất + lời giải thích lời giải. Sau đó test thử từ tài liệu dạng scan thô và chữ viết tay (hơi khê, hơi khó).
+- Nửa sau tuần: mở rộng điên cuồng luôn, gồm câu tự luận chấm offline, câu hỏi tính toán, giao diện ôn tập (lịch sử, ôn câu sai v.v...) và bản windows đầu tiên.
+- Hiện tại mới có plan như vậy, tuy vậy sẽ cố gắng đẩy nhanh nhất có thể.
 
 ---
 
