@@ -3,9 +3,9 @@
 | Thông tin | Chi tiết |
 | --- | --- |
 | **Tên** | Nguyễn Viết Hoàn |
-| **Tuần** | 1 |
-| **Nội dung** | Nêu được đã học được gì liên quan tới Claude, Claude Code, Vibe Coding, và nêu ý tưởng cho sản phẩm sẽ build |
-| **Hạn nộp** | Trước 19:00 Chủ nhật 18/10/2026 (giờ VN) |
+| **Tuần** | 2 |
+| **Nội dung** | Chốt spec và dựng khung dự án |
+| **Hạn nộp** | Trước 19:00 Chủ nhật 25/10/2026 (giờ VN) |
 | **Lưu ý** | Report phải do bạn tự viết, không dùng AI để viết. Ưu tiên viết dạng gạch đầu dòng. |
 | **Link repo sản phẩm** | https://github.com/Nha-Cong-Dong/form-coach |
 | **Ý tưởng** | **Motivation:** Khi tập luyện thể dục thể thao, đặc biệt những bài compound như Push up, Squat, Deadlift,... Rất nhiều người gặp khó khăn trong việc điều chỉnh động tác sao cho chuẩn, tập luyện để không gặp chấn thương... FormCoach ra đời để giải quyết vấn đề này. App sẽ vẽ khung xương và đếm rep ngay trong lúc tập, hết hiệp thì phát hiện lỗi kĩ thuật cho từng rep. Có Coach AI nhận xét từng buổi. App sẽ cho phép đề ra mục tiêu mỗi ngày, theo dõi tổng quan và có chuỗi ngày tập |
