@@ -47,3 +47,13 @@
 ## Nhận xét của Hoàng Đỗ
 
 <!-- Phần này dành cho Hoàng Đỗ -->
+
+- Code review chi tiết: [issue "Code review Checkpoint 2" trong repo SkinWise](https://github.com/Nha-Cong-Dong/SkinWise/issues?q=is%3Aissue%20%22Code%20review%20Checkpoint%202%22)
+- Kế hoạch tuần 1 để trống, nhưng các việc nhận xét tuần 1 gợi ý đều đã làm: repo, khung React + FastAPI + PostgreSQL, CLAUDE.md, bảng luật cảnh báo có nguồn. Tiến bộ rất rõ so với tuần 1.
+- Bảng luật đi đúng hướng: 5 luật đã duyệt, mỗi luật có đoạn trích nguồn, có script kiểm tra trích dẫn nguyên văn, luật thiếu nguồn hoặc chưa duyệt thì không được seed. Disclaimer có ở README, giao diện và cả khi kết quả rỗng.
+- Phần khó khăn viết rất thực tế: bảng thành phần không có nồng độ nên bạn chọn giữ cảnh báo thừa thay vì bỏ sót, và luôn ghi "không có cảnh báo không có nghĩa là an toàn". Đây là quyết định sản phẩm đúng cho một app liên quan sức khoẻ.
+- Code review tìm thấy cảnh báo sai do từ điển hoạt chất tại hạn còn là bản nháp AI chưa duyệt: "BHA" bị hiểu là salicylic acid, trong khi trong bảng thành phần (INCI) BHA là butylated hydroxyanisole. Bạn đã sửa sau hạn; từ điển cũng cần được duyệt như bảng luật.
+- Có những chỗ app im lặng mà lẽ ra phải báo: tên gõ sai ("Retinoll") hay nhãn Drug Facts kiểu Mỹ ra 0 nhóm, 0 lưu ý mà không báo kết quả có thể thiếu. Lệnh seed cũng không gỡ luật đã xoá khỏi TOML, DB vẫn giữ luật cũ.
+- Tại hạn, giao diện và phần nhận diện thành phần còn ở nhánh `feat/ingredient-coverage`, 22:04 25/10 mới vào `main`.
+- Kế hoạch tuần 3 cụ thể nhưng chủ yếu là việc dữ liệu (nguồn, bản dịch, lời giải thích). Sau hạn repo đã thêm tài khoản và đọc nhãn bằng ảnh, không có trong kế hoạch này. Tuần 3 là hạn MVP: ghi rõ luồng MVP (nhập sản phẩm → kiểm tra routine → cảnh báo có nguồn) và chỉ thêm tính năng mới khi luồng đó chạy ổn.
+- Ghi chú: report được commit lúc 19:40 25/10, sau hạn 19:00.
