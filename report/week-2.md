@@ -61,3 +61,12 @@
 ## Nhận xét của Hoàng Đỗ
 
 <!-- Phần này dành cho Hoàng Đỗ -->
+
+- Code review chi tiết: [issue "Code review Checkpoint 2" trong repo RunMate](https://github.com/Nha-Cong-Dong/RunMate/issues?q=is%3Aissue%20%22Code%20review%20Checkpoint%202%22)
+- Xong gần hết kế hoạch tuần 1: SPEC.md gần 800 dòng có phạm vi, use case, quy tắc nghiệp vụ, ERD, màn hình; khung code có điều hướng cho 8 màn hình; chạy thử gọi API thời tiết và ghi GPS trên máy thật ở 2 nhánh `spike/api`, `spike/gps`. Phần thử thông báo bị bỏ có lý do rõ.
+- Chọn Android native giải quyết đúng vấn đề ghi GPS khi tắt màn hình nêu ở tuần 1; Open-Meteo không cần key nên không có rủi ro lộ key.
+- Mục "Kết quả so với kế hoạch tuần trước" mới chép lại kế hoạch kèm "(Đã xong)". Nên ghi kết quả thật, ví dụ spike GPS ghi được bao lâu khi tắt màn hình, sai số bao nhiêu, API trả về những gì; các số này đã có trong SPEC nhưng report chưa kể.
+- Người khác hiện khó build theo README: `gradlew` không có quyền thực thi nên `./gradlew` báo Permission denied trên macOS/Linux, và tài liệu ghi JDK 17 trong khi `gradle-daemon-jvm.properties` yêu cầu JDK 25.
+- Code review tìm thấy một lỗi trong spec: BR-02 cho đặt kế hoạch xa 16 ngày nhưng `forecast_days=16` tính cả hôm nay, nên kế hoạch sát mốc 16 ngày sẽ không có dự báo, và luồng UC1 coi đó là lỗi mạng, cho Thử lại mãi.
+- Kế hoạch tuần 3 chia theo nhánh rất cụ thể (ghi "5 đầu" nhưng liệt kê 6). Phạm vi vẫn rộng cho 1 tuần: gợi ý làm `feat/ghi-chay` trước vì rủi ro nhất, rồi kế hoạch và thời tiết; quỹ đạo và lịch sử làm bản tối giản.
+- Thêm skill `explain` để Claude giải thích code là cách hay cho vấn đề "chưa hiểu hết công nghệ Claude gợi ý"; tuần sau kể một lần skill này giúp bạn hiểu ra điều gì.
