@@ -53,3 +53,13 @@
 ## Nhận xét của Hoàng Đỗ
 
 <!-- Phần này dành cho Hoàng Đỗ -->
+
+- Code review chi tiết: [issue "Code review Checkpoint 2" trong repo Essity](https://github.com/Nha-Cong-Dong/Essity/issues?q=is%3Aissue%20%22Code%20review%20Checkpoint%202%22)
+- Report liệt kê rõ những gì đã chạy được trong tuần: đăng ký có xác minh email, phiên 30 ngày và đăng xuất mọi thiết bị, khoá tạm khi nhập sai nhiều lần, đặt lại mật khẩu, tạo/sửa/xoá môn có ngày thi. Code review xác nhận các phần này có thật trên `main`, kèm 884 test core-api chạy qua.
+- Workflow 7 agent (lập kế hoạch, phản biện, kiểm thử cố tình phá code, giữ tài liệu, PM, chuyên gia) được mô tả cụ thể, và bạn đã rút ra bài học không trao quyền xoá thư mục cho agent. Đây đúng là phần Claude Code thực chiến mà report tuần 1 còn thiếu.
+- Kế hoạch tuần 1 để trống nên tuần này không có gì để đối chiếu; bạn đã ghi thẳng điều đó trong report.
+- Spec vẫn chưa có trên repo: `docs/`, `.claude/` và CLAUDE.md vẫn bị `.gitignore` chặn, tài liệu nằm ở một repo private, trong khi code dẫn tới ADR/US khoảng 250 chỗ. Spec nằm trong repo hoặc có link mở được là yêu cầu chính của checkpoint 2 và tuần 1 mình đã nhắc. Bạn đưa ít nhất spec/PRD và CLAUDE.md lên repo.
+- Tại hạn, vòng lõi có AI chưa bắt đầu: ai-service mới có `/ping`, màn Hôm nay và bước tải tài liệu còn "sắp có". Kế hoạch tuần 3 nhắm đúng vào vòng này (nạp tài liệu, sinh câu hỏi, màn Hôm nay, AI chấm), và sau hạn repo đã có upload, extract, chấm qua hàng đợi. Tuần 3 là hạn MVP, nên ưu tiên một luồng chạy trọn từ tải tài liệu đến chấm điểm trước khi thêm hạ tầng.
+- Hai việc "quyết định ngân sách deploy" và "chọn mô hình AI" nên chốt ngay đầu tuần: môi trường local đã 11 container, cần biết sớm sẽ deploy ở đâu và tốn bao nhiêu cho tuần 4.
+- `just env`, bước đầu tiên trong README, viết bằng PowerShell nên lỗi trên Linux/macOS; người khác thử chạy repo sẽ kẹt ngay bước này.
+- Tự nhận xét đã nói thẳng về các quyết định sai và quy trình chưa chặt. Report tuần này đúng hạn và đủ mục, tiến bộ rõ so với tuần 1.
