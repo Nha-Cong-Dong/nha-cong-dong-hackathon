@@ -46,3 +46,12 @@
 ## Nhận xét của Hoàng Đỗ
 
 <!-- Phần này dành cho Hoàng Đỗ -->
+
+- Code review chi tiết: [issue "Code review Checkpoint 2" trong repo PokeNexus](https://github.com/Nha-Cong-Dong/PokeNexus/issues?q=is%3Aissue%20%22Code%20review%20Checkpoint%202%22)
+- Tiến bộ rõ so với tuần 1: repo PokeNexus có spec 1.0, khung backend Spring Boot và frontend React, CLAUDE.md, 5 ADR, CI. Bạn làm theo cả 2 góp ý tuần 1: dùng CSV của PokéAPI (ADR 0002) và định nghĩa tiêu chí gợi ý đội hình trong `docs/architecture.md`.
+- Tự nhận xét "chưa động đến Backend" đang đánh giá thấp mình: khung backend đã có health endpoint và 22 unit test từ 21/10.
+- Report mô tả CLAUDE.md là file dùng chung cho mọi dự án và CLAUDE.local.md là quy tắc riêng của dự án, ngược với Claude Code. File dùng chung cho mọi dự án là `~/.claude/CLAUDE.md`; `CLAUDE.md` trong repo là quy tắc của dự án, commit lên cho mọi người; `CLAUDE.local.md` là ghi chú cá nhân, không commit. CLAUDE.md trong repo của bạn đang ghi đúng như vậy.
+- Lộ trình trong repo lệch lịch hackathon một tuần: `docs/roadmap.md` và CLAUDE.md đặt MVP 02–08/11, demo 15/11, trong khi hackathon cần MVP ngày 01/11 và demo ngày 08/11. Claude đọc các file này mỗi phiên nên sẽ làm theo lịch sai; bạn sửa ngay nhé.
+- Kế hoạch tuần 3 có "cào dữ liệu, video, minigame", ngược với ADR 0002 và phạm vi MVP trong `docs/product.md`. Sau hạn bạn đã nạp CSV PokéAPI và làm Pokédex; tuần 3 nên dồn vào 4 việc MVP (Pokédex, so sánh 2 Pokémon, bảng tương khắc, gợi ý đội hình), bỏ cào dữ liệu và minigame.
+- Repo đang có khoảng 4.300 dòng Markdown so với 1.300 dòng code; CLAUDE.md và README còn ghi trạng thái tuần 1, README chưa có cách chạy. Cập nhật tài liệu theo code và thêm mục chạy local.
+- "Hầu như lúc nào cũng chọn cái recommend" là tự quan sát tốt. Mỗi lần chọn, thử viết một câu vì sao chọn phương án đó; không viết được thì hỏi lại Claude về đánh đổi giữa các phương án.
