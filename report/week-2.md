@@ -70,3 +70,13 @@
 ## Nhận xét của Hoàng Đỗ
 
 <!-- Phần này dành cho Hoàng Đỗ -->
+
+- Code review chi tiết: [issue "Code review Checkpoint 2" trong repo Holocron](https://github.com/Nha-Cong-Dong/Holocron/issues?q=is%3Aissue%20%22Code%20review%20Checkpoint%202%22)
+- Các đầu việc kế hoạch tuần 1 đều xong và code review xác nhận: spec tới schema và endpoint, API contract, CLAUDE.md kỹ, khung chạy được với 233 test pass, coverage 99,6%, CI chạy cả Linux và Windows.
+- Report tự mâu thuẫn về scope: dòng Ý tưởng nói đã thu về một môn (CPU Scheduling), phần sau nói đã đổi sang đa môn, desktop Tauri, SQLite, nhập PDF có OCR. Tại hạn toàn bộ code phục vụ luồng CPU Scheduling, lát cắt MVP mới chưa có dòng code nào. Đây là lần đổi scope lớn thứ hai chỉ trong một tuần.
+- Kế hoạch tuần 3 có "nửa sau tuần: mở rộng điên cuồng" (tự luận, câu tính toán, giao diện ôn tập, bản Windows), đi ngược mục tiêu: tuần 3 phải xong MVP, tuần 4 hoàn thiện và demo. Gợi ý chốt MVP đúng luồng bạn viết ở nửa đầu tuần (nhập tài liệu → câu trắc nghiệm có trích dẫn → làm bài và xem đáp án), phần còn lại để sau hackathon.
+- Code review đo được lỗi ở tính năng lõi: batch 3 twin thường sinh đề trùng (10/10 batch có trùng), và trong app thật luồng twin trả 404 vì chưa có `POST /v1/blueprints`. Sandbox chạy `exec` đã tách tiến trình, có giới hạn tài nguyên, nhưng chưa cô lập ở mức hệ điều hành; cần bổ sung trước khi cho LLM viết template.
+- Phần thống kê token rất có giá trị (92% là cache read, 89% usage ở vùng trên 150k context). Với vấn đề CLAUDE.md chiếm khoảng 40k token thường trực: gợi ý rút CLAUDE.md về các quy tắc cốt lõi, chuyển phần chi tiết sang file trong `docs/` và chỉ để link cho Claude đọc khi cần.
+- Report tuần này rất dài và giống nhật ký; ưu tiên gạch đầu dòng ngắn theo đúng các mục, phần nhật ký có thể để trong repo.
+- Tự nhận xét trung thực về thời gian (16–18 tiếng/tuần, đang thi giữa kỳ). Với quỹ thời gian đó, càng nên giữ scope nhỏ.
+- Ghi chú: bản cập nhật cuối của report được commit lúc 19:22 25/10, sau hạn 22 phút; bản tại hạn là bản 19/10, mục kế hoạch còn trống.
