@@ -45,3 +45,12 @@
 ## Nhận xét của Hoàng Đỗ
 
 <!-- Phần này dành cho Hoàng Đỗ -->
+
+- Code review chi tiết: [issue "Code review Checkpoint 2" trong repo form-coach](https://github.com/Nha-Cong-Dong/form-coach/issues?q=is%3Aissue%20%22Code%20review%20Checkpoint%202%22)
+- Xong đủ 4 đầu việc kế hoạch tuần 1: pose MediaPipe (33 khớp, rút ra phải xoay ngang và đặt máy đủ xa), đếm rep theo góc khuỷu tay, trang quay trên điện thoại, khoảng 200 rep có 5 nhãn lỗi. Code review xác nhận mọi việc report kể đều có trong code, 516 test chạy qua.
+- Phần phát sinh nhiều: baseline luật, random forest, web app có đăng nhập, lịch sử, đếm rep trực tiếp, biểu đồ 14 ngày, streak. Lưu ý mục tiêu/streak/dashboard tại hạn mới ở nhánh `feat/progress`, 26/10 mới vào `main`.
+- Bài học "test pass chưa chắc đã tốt, phải thử trên dữ liệu thật" rất đúng; chính code review cũng tìm ra lỗi lớn nhất khi chạy thật với 2 tài khoản.
+- Lỗi cần sửa trước khi deploy: tài khoản B đọc được keypoint và ghi đè được nhãn của tài khoản A, và hiệp ở chế độ Tập của mọi người đều ghi vào thư mục dữ liệu train. Kế hoạch "chỉ admin được quay và gán nhãn" mới giải quyết một phần; cần tách dữ liệu theo tài khoản ở mọi endpoint.
+- Random forest chưa tới được bản deploy: mô hình học lại từ `data/` (bị gitignore) mỗi lần khởi động, không có dữ liệu thì app lặng lẽ dùng luật. Nên lưu mô hình đã train thành file và cho app báo rõ đang dùng mô hình nào.
+- README chưa có mục cách chạy: biến `FORMCOACH_ALLOW_REGISTER` và cách tải file model chỉ nằm trong CLAUDE.md hoặc thông báo lỗi, dòng trạng thái cũng đang lệch so với code.
+- Kế hoạch tuần 3 cụ thể, nhưng thêm coach dùng LLM và đăng nhập Google trong khi chưa có việc nào cho deploy, mà tuần 4 dành cho deploy và demo. Gợi ý thay đăng nhập Google bằng một lần deploy thử, giữ coach ở bản mẫu câu (bạn đã làm sau hạn).
