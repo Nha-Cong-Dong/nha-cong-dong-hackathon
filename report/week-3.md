@@ -7,8 +7,8 @@
 | **Nội dung** | Build MVP |
 | **Hạn nộp** | Trước 19:00 Chủ nhật 01/11/2026 (giờ VN) |
 | **Lưu ý** | Report phải do bạn tự viết, không dùng AI để viết. Ưu tiên viết dạng gạch đầu dòng. |
-| **Link repo sản phẩm** |  |
-| **Ý tưởng** | https://github.com/Nha-Cong-Dong/SkinWise.git |
+| **Link repo sản phẩm** | https://github.com/Nha-Cong-Dong/SkinWise.git |
+| **Ý tưởng** |  |
 
 ---
 
@@ -33,7 +33,10 @@
 <!-- Bạn tự đánh giá bản thân trong tuần này -->
 
 - Hoàn thiện các phần việc trong kế hoạch tuần hai
-- Vẫn chưa biết các
+- Thêm được chức năng cho web
+- Vẫn chưa biết cách tối ưu, dùng subagent tiêu tốn nhiều token không cần thiết
+- Frontend đang claude gen + skill chưa bắt đầu học dùng claude design
+  
 
 ## Kế hoạch tuần tới
 
