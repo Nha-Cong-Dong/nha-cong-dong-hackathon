@@ -14,24 +14,26 @@
 
 ## Kết quả so với kế hoạch tuần trước
 
-- Đã hoàn thành phần code cho các tính năng cốt lõi của MVP, clipboard mới có lõi chứ chưa có giao diện.
+- Đã hoàn thành phần code cho các tính năng cốt lõi của MVP, clipboard mới có lõi chứ chưa có giao diện. Có thể chạy trọn vẹ luồng truyền file từ đầu đến cuối. Cụ thể luồng hoạt động: Máy A bật listen -> Máy B gọi pair và 2 máy xác nhận mã 6 số -> Máy A gửi 1 file -> Máy B nhận từng khối, lưu vào thư mục ẩn .teleport, hash khớp toàn vẹn vè đổi tên file thành công. 
 - Chạy thử qua 2 máy 1 lần để đánh giá hiệu năng và truyền file. Tốc độ chạy thử gần bằng SMB, file nhận chính xác không có lỗi.
 - Đã bỏ bớt sub-agent không cần thiết và tối ưu token tiêu thụ khi làm việc bằng cách chia nhỏ task và session.
 - Tối ưu thời gian chạy test (giảm 3/4 thời gian) nhờ chạy song song.
+- Đã bổ sung đầy đủ hướng dẫn cài đặt và chạy sản phẩm vào file `README.md` để người khác có thể tự chạy và test được luồng chính của sản phẩm.
 
 ## Tự nhận xét
 - Đã hiểu rõ hơn về dự án, nắm được kiến trúc hệ thống của các tầng core, trust, net, app, ui/cli. 
-- Nắm được kế hoạch khi agent bắt đầu thực hiện code.
+- Nắm được kế hoạch và luồng xử lý trước khi giao việc cho agent bắt đầu viết code.
 - Tối ưu token và ngữ cảnh, số lượng token tiêu thụ mỗi phiên giảm 1/2 so với tuần trước.
 - Vẫn chưa có thiết bị để đo hiệu năng thực tế.
 - Phần logic về test kiểm tra vẫn chưa nắm rõ.
 - Dùng Claude code hiệu quả hơn: lên kế hoạch spec kĩ trước khi code, chia nhỏ các task để tối ưu ngữ cảnh và tăng tốc độ xử lý song song, hỏi lại, trình bày ý hiểu trước khi làm.
+
 ## Kế hoạch tuần tới
 - Đánh giá hiệu năng, bổ sung các thông số cho benchmark.
-- Fix bug và kiểm thử luồng hoạt động trơn tru.
+- Fix bug và kiểm thử luồng hoạt động trơn tru (như rớt mạng, dừng đột ngột)
 - Hoàn thiện giao diện và trải nghiệm người dùng.
 - Bổ sung kiến thức sâu hơn về các phần khác trong dự án như giấy phép, test, CI GitHub.
-- Kiểm soát Claude tốt hơn: đảm bảo đầu ra, lượng token tiêu thụ, sử dụng các plugin thiết kế giao diện và setup Claude cho mỗi dự án.
+- Kiểm soát Claude tốt hơn: đảm bảo chất lượng đầu ra, quản lý lượng token tiêu thụ, sử dụng thêm các plugin thiết kế giao diện và chuẩn hóa setup Claude cho mỗi dự án mới.
 - Đóng gói, hoàn thiện và demo sản phẩm.
 ## Nhận xét của Hoàng Đỗ
 
