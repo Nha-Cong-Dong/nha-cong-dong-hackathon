@@ -77,3 +77,13 @@
 ## Nhận xét của Hoàng Đỗ
 
 <!-- Phần này dành cho Hoàng Đỗ -->
+
+- Code review chi tiết: [issue "Code review Checkpoint 3" trong repo Essity](https://github.com/Nha-Cong-Dong/Essity/issues?q=is%3Aissue%20%22Code%20review%20Checkpoint%203%22)
+- Đối chiếu kế hoạch tuần 2: cả 4 đầu việc đều có code. Đã chốt Haiku 5.5 và trần 2 USD, có khung eval chấm, có nạp tài liệu + tách ý + sinh câu hỏi, có màn Hôm nay → trả lời → AI chấm kèm hàng đợi chấm. Report cũng ghi rõ phần chưa xong (chưa đo trên dữ liệu thật), nên rất dễ đối chiếu.
+- Tại hạn, vòng học vẫn chưa chạy trọn trên stack thật. `infra/docker-compose.yml` thiếu core consumer và ai consumer, nên làm theo README thì PDF nằm mãi ở `uploaded`, buổi học không ra câu hỏi, câu vào hàng đợi chấm không bao giờ có kết quả. Code review chỉ chạy được nửa sau của vòng, và phải dùng LLM giả.
+- Schema đầu ra của tách ý, sinh câu hỏi và 5 task khác có `maxItems`/`maxLength`, trong khi structured outputs của Anthropic không nhận các ràng buộc này. Vì vậy các task đó mới chạy được với LLM giả. Ngoài ra mọi task đang dùng chung trần 800 token. Sau hạn bạn đã thêm consumer và lọc schema, tuần sau mình xem lại. Gợi ý: đầu tuần chạy một lần smoke trên model thật với 1 PDF nhỏ (tốn vài cent), rồi biến nó thành bước kiểm trước mỗi lần merge.
+- Rủi ro lớn nhất là đổi sang v2 giữa tuần: viết lại PRD/spec ngày 30/10, tới hạn mới xong 14/34 task, và code đang có hai luồng v1/v2 dở song song. Kế hoạch tuần 4 liệt kê 6 màn/luồng v2 cộng phần luyện tập nhưng không có việc deploy. Bạn nên chốt demo bằng một luồng (v1, hoặc vòng v2 tối thiểu), khoá phạm vi, và deploy bản tối thiểu trước giữa tuần.
+- Spec v2, ADR và CLAUDE.md vẫn nằm trong thư mục bị `.gitignore`. Mình đã nhắc từ tuần 1, trong khi code dẫn tới ADR khoảng 480 chỗ và tới US hơn 1.100 chỗ. Người đọc repo không có cách đối chiếu code với spec. Bạn đưa ít nhất PRD/spec v2 lên repo nhé.
+- Phần chạy 5 luồng song song được mô tả rất cụ thể: khoá migration cho một luồng, kiểm bằng chứng trước khi merge, retro theo số liệu. Tự nhận xét cũng nêu thẳng lỗi của chính quy trình (31 lần merge không retro, agent commit nhầm nhánh) và cách bạn đã chặn. Code review xác nhận PR nào cũng có Làm gì / Vì sao / Cách kiểm / DoD, và ruff, pyright strict, eslint, tsc đều sạch trên khoảng 118 nghìn dòng thêm mới.
+- Phần bảo mật làm kỹ: dữ liệu người dùng được rào trước khi vào prompt, mỗi tài khoản có trần chi phí AI, có test quét mọi route thiếu xác thực. Code review thử truy cập chéo hai tài khoản và đều nhận 404.
+- Bạn tự ghi có phiên điều phối tốn hơn 100M token, ảnh hưởng tới ae dùng chung. Việc còn lại của tuần 4 chủ yếu là ghép nối và kiểm thử, không cần viết thêm nhiều code. Vì vậy nên giảm số luồng song song và đặt trần token cho mỗi phiên điều phối.
