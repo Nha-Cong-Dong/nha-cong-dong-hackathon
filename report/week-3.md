@@ -43,3 +43,28 @@
 ## Nhận xét của Hoàng Đỗ
 
 <!-- Phần này dành cho Hoàng Đỗ -->
+
+- Code review chi tiết: [issue "Code review Checkpoint 3" trong repo RunMate](https://github.com/Nha-Cong-Dong/RunMate/issues?q=is%3Aissue%20%22Code%20review%20Checkpoint%203%22)
+- Đối chiếu kế hoạch tuần 2: cả 6 mảng đã vào `main` qua 5 PR. Đó là Room, kế hoạch và chọn vị trí, thời tiết, ghi GPS bằng foreground service, màn kết quả có quỹ đạo, lịch sử trên lịch tuần. Bạn còn làm thêm khôi phục buổi dở, gợi ý BR-44 và cảnh báo pin BR-61. Luồng chính MVP (kế hoạch + thời tiết → chạy → kết quả → lịch sử) đã đủ trong code.
+- Report kể hơi nhiều hơn code tại hạn:
+  - Thống kê có "biểu đồ cột", "hoàn thành hết các màn hình": lúc 19:00, S8 mới có `StatsRules` ở nhánh `feat/thong-ke-agy`; phần giao diện là commit lúc 19:08.
+  - Thời tiết lấy khả năng mưa chứ không lấy độ ẩm.
+  - Ngưỡng nóng trong code là 35°C (BR-11), không phải 38°C.
+  
+  Report nên kể đúng những gì đang có trên `main`.
+- Phần làm tốt:
+  - Tầng quy tắc là hàm thuần, nhận thời gian qua tham số, có khoảng 200 unit test; code review chạy 170 test JVM và tất cả đều qua.
+  - Mọi thay đổi buổi chạy cùng kế hoạch đi qua một transaction, có test rollback.
+  - Service ghi GPS làm đủ 3 lưu ý rút ra từ spike tuần 2.
+- Câu tự nhận "chưa có thời gian hiểu code AI viết" khớp với những gì code review thấy. Các lỗi đều nằm ở phần ghi chạy, phần này vào repo qua commit `4a6960c` (42 file, +2.665 dòng) và được merge 3,5 giờ trước hạn. Cụ thể:
+  - Tạm dừng dưới 30 giây vẫn bị tính thời gian, trái US9.
+  - Khôi phục buổi dở có đường làm app đóng khi thiếu quyền vị trí.
+  - Cách chọn mốc giờ dự báo khiến khung 07:00–07:59 luôn báo lỗi mạng.
+  
+  Mỗi lỗi chỉ cần sửa vài chục dòng; bạn sửa kèm một test cho từng lỗi.
+- Kế hoạch tuần 4 đúng hướng: test với dữ liệu thật, deploy, demo, README. Với app Android, nên cụ thể hơn:
+  - "Deploy": phát APK qua GitHub Release và ghi cách cài vào README.
+  - "Testing thực tế": chạy bài thử ở SPEC 10.7 (400 m, rút sạc, có tạm dừng, có tắt quyền vị trí) và ghi lại số liệu.
+- Người khác vẫn chưa build được theo README. `gradlew` vẫn thiếu quyền thực thi, và README/CLAUDE.md ghi JDK 17 trong khi cấu hình ép JDK 25. Hai lỗi này tồn từ tuần 2; `gradlew` chỉ cần một lệnh `git update-index --chmod=+x gradlew`.
+- Icon và chế độ sáng/tối trong kế hoạch nên để sau cùng, khi luồng chính đã ổn trên máy thật.
+- Ghi chú: report được commit lúc 19:06 01/11, sau hạn 19:00.
