@@ -63,3 +63,31 @@
 ## Nhận xét của Hoàng Đỗ
 
 <!-- Phần này dành cho Hoàng Đỗ -->
+
+- Code review chi tiết: [issue "Code review Checkpoint 3" trong repo Holocron](https://github.com/Nha-Cong-Dong/Holocron/issues?q=is%3Aissue%20%22Code%20review%20Checkpoint%203%22)
+- Đối chiếu kế hoạch tuần 2: nửa đầu tuần đạt. Luồng nhập PDF → Vault → cặp khái niệm → câu MCQ4 lý thuyết kèm trích dẫn và số trang chạy thật; code review tự chạy qua API và dữ liệu vẫn còn sau khi khởi động lại. Đã có tag `v0.2.0-alpha` trên `develop`. Scan thô, chữ viết tay và nhiều mục của nửa sau tuần chưa làm, report đã ghi thẳng.
+- Có vài mục report ghi đã xong nhưng code tại hạn chưa có:
+  - Chấm tự luận offline: backend không có route chấm, `essay_grading_offline` trả `not_implemented`, giao diện tự luận chỉ chạy với mock.
+  - Lịch sử và ôn câu sai: mới có nút "Sắp có".
+  - Tự đề xuất khái niệm tại local: endpoint trả 409 khi chưa cấu hình LLM.
+  
+  Trước khi viết report, bạn đối chiếu từng mục "đã xong" với route thật. Phần nào mới có giao diện và mock thì ghi rõ như vậy.
+- Tự nhận xét "biết cắt bỏ mục tiêu" khớp với việc hoãn LLM/VLM. Nhưng năm commit cuối trước hạn đều là các vòng review ADR-010 (72 KB tài liệu, chưa có dòng code nào). Kế hoạch tuần 4 lại thêm bộ dựng khối, VLM/API key và Tauri 1.0. Một tuần còn lại không đủ cho tất cả.
+- Gợi ý kế hoạch tuần 4:
+  - Làm xong, hoặc cắt hẳn, phần lịch sử và ôn câu sai.
+  - Sửa lỗi câu trùng.
+  - Chạy cả luồng trên tài liệu thật của một môn.
+  - Phát hành zip từ `main` kèm GitHub Release.
+  - ADR-010, VLM và Tauri để sau hackathon.
+- Hai lỗi cần sửa:
+  - Dấu vân tay chống trùng đang tính cả phương án nhiễu, nên cùng một câu hỏi xuất hiện hai lần ở 8/20 đề 5 câu.
+  - API local chưa chống CSRF (code review đã tái hiện được), nên một trang web bất kỳ có thể gọi API của app khi app đang chạy.
+- Có nhiều phần làm tốt mà report không kể:
+  - Đo trước khi chỉnh ngưỡng, có tách tập dev và tập chấm mù (ADR-008).
+  - Vá DNS rebinding.
+  - Khoá dependency bằng hash.
+  - 5.061 test backend với coverage 97,58%.
+- Tại hạn, `main` vẫn ở bản 27/10, chậm 488 commit so với `develop`; README dừng ở 26/10. Ai mở repo trên GitHub cũng sẽ thấy bản cũ. Bạn merge vào `main` và cập nhật README ở mỗi checkpoint nhé.
+- Bạn tự ghi làm quá giờ nhiều đến mức ảnh hưởng sức khỏe, và có 2 lần subagent chạy hết token pool chung. Tuần cuối nên ưu tiên ngủ đủ. Với subagent, đặt giới hạn rõ cho mỗi lần chạy, nhất là lúc debug.
+- Ô "Tên" ở đầu report vẫn để trống.
+- Ghi chú: report được commit lúc 23:54 01/11, sau hạn 19:00.
