@@ -2,7 +2,7 @@
 
 | Thông tin | Chi tiết |
 | --- | --- |
-| **Tên** |  |
+| **Tên** | Nguyễn Viết Hoàn |
 | **Tuần** | 3 |
 | **Nội dung** | Build MVP |
 | **Hạn nộp** | Trước 19:00 Chủ nhật 01/11/2026 (giờ VN) |
