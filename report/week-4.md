@@ -55,6 +55,7 @@
 - Cảm ơn Hoàng Đỗ đã tạo ra một Hackathon rất ý nghĩa. sau một tháng vừa qua, tôi đã học được rất nhiều điều.
 - Cảm ơn Hoàng Đỗ đã tiếp thêm tinh thần cho mọi người. Chắc chắn mọi người sẽ cố gắng nhiều hơn nữa trong thời gian tới.
 - Sẽ tiếp tục phát triển thêm tính năng và chau chuốt sản phẩm trong thời gian tới.
+- Chúc Hoàng Đỗ luôn luôn mạnh khỏe, hạnh phúc. Gặp nhiều may mắn, gặt hái nhiều thành công hơn <3.
 ---
 
 ## Nhận xét của Hoàng Đỗ
