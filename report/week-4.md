@@ -17,21 +17,20 @@
 <!-- Đi qua từng đầu việc trong "Kế hoạch tuần tới" của report Checkpoint 2: việc nào xong, việc nào chưa và vì sao, việc nào phát sinh thêm -->
 Xong
 - Đã hoàn thành bản release đầu tiên cho sản phẩm
+- Có thêm các feedback và ý tưởng để có thể tiếp tục hoàn thiện thêm sản phẩm
 - Có vài thay đổi về UI 
 
-## Tự nhận xét
+## Tự nhận xét quá trình và thành quả
 
-- Đã hoàn thành bản release đầu tiên cho sản phẩm
-- Đã tự tay Deploy và biết các bản Deploy Free thì sẽ có những hạn chế nào.
+- Về quá trình, dù chưa thực sự hoàn hảo lắm nhưng tôi đã được biết về các vấn đề phải quan tâm trong quá trình tạo sản phẩm như: Git, Vibe, UI/UX, lấy feedback, deploy sản phẩm, pháp lý, pricing, .... Đã đi từ những ngày đầu chỉ biết prompt, tới những ngày biết prompt và quản lý SKILLS, Usage, ... kỹ hơn để có thể đạt được output mình mong muốn. 
+- Thành quả hiện tại đang là một app dùng được, và cũng đang ấp ủ rất nhiều tính năng để có thể tiếp tục phát triển thêm hơn nữa. Từ góc nhìn cá nhân, dù sản phẩm chỉ nhắm tới một tệp người dùng nhỏ, nhưng cũng đáng để có thể tiếp tục phát triển, đầu tư để có thêm nhiều bài học và trải nghiệm nữa.
 - Happy Hackathon!
 
-## Kế hoạch tuần tới
+## Cảm nghĩ & lời nhắn gửi tới Hoàng Đỗ
 
-<!-- Viết cụ thể từng đầu việc: report tuần sau sẽ đối chiếu với phần này -->
-- Thời gian tới sẽ hoàn thiện thêm ý tưởng về việc note nhiều người.`
-- Nghiên cứu lại về UI để có giao diện tốt hơn. Nghiên cứu thêm về UX để ra các tính năng hợp lý hơn, có khả năng giữ chân người dùng tốt hơn. 
-- Thử nghiệm và mời nhiều người dùng thử hơn để có thêm insight về sản phẩm
-- Nếu như sản phẩm đủ tốt, hoàn thiện các Chính sách về quyền riêng tư, pháp lý, ... để có thể bắt đầu thêm các gói nâng cao.
+- Sau hơn 1 tháng, tôi cảm thấy rất vui khi được làm quen với các công cụ và quá trình tự học, tự làm ra một sản phẩm trông như thế nào. Có thể là thực tế để sử dụng hiệu quả thì nó còn phải học và tìm hiểu nhiều thứ nữa, nhưng tôi tin rằng với những nền tảng hiện tại thì tôi có thể tiếp tục đi tiếp và tìm hiểu được nhiều điều hơn nữa. Đối với bản thân tôi sau một thời gian dài chìm đắm trong buồn bã, mất động lực thì sau cuộc Hackathon này cũng được tiếp thêm động lực và hiểu biết để có thể đứng dậy đi tiếp tốt hơn.
+  
+- Thật sự là chưa từng nghĩ tới việc trải nghiệm Claude Code, hay sẽ có một tháng ý nghĩa như vậy. Rất cảm ơn Hoàng Đỗ vì đã cung cấp tài nguyên và dành thời gian tới nghe mọi người Pitching để có những góp ý rất tốt cho từng người. Chúc Hoàng Đỗ sẽ luôn có nhiều thành công, gặp nhiều may mắn và hạnh phúc trong cuộc sống của mình nhé!! 
 
 ---
 
